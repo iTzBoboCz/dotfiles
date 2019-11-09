@@ -1,6 +1,6 @@
 # config = alias for git
 echo Write filenames:
-read filenames #vstup
+read filenames #input
 echo What did you change?:
 read changed #commit message
 cd $HOME
