@@ -1,4 +1,5 @@
 # dotfiles
 config = alias for git command
 
-#test
+# tutorial:
+https://www.youtube.com/watch?v=tBoLDpTWVOM
