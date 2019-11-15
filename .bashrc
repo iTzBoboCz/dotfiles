@@ -16,4 +16,9 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+# git for dotfiles
 alias config='/usr/bin/git --git-dir=/home/ondrejpesek/dotfiles --work-tree=/home/ondrejpesek'
+
+# neofetch on start
+neofetch
