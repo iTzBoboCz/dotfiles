@@ -1,14 +1,23 @@
+# Enable skipping words with ctrl+arrows
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5B' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5A' backward-word
+
+# Insert, Delete,..
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
-
 # History in share directory:
 HISTFILE=~/.local/share/zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
 
 # Basic auto/tab complete:
 autoload -U compinit
