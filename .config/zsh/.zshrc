@@ -14,7 +14,7 @@ autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # History in share directory:
-HISTFILE=~/.local/share/zsh_history
+HISTFILE=~/.local/share/history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
